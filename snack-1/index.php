@@ -1,36 +1,34 @@
 
 <?php
-  $matches = [
-    "Prima Partita" =>[
-      "casa" => "Segafredo Virtus Bologna",
-      "ospiti" => "OriOra Pistoia",
-      "puntiCasa" => 90,
-      "puntiOspiti" => 60
-    ],
-    "Seconda Partita" => [
-      "casa" => "Pompea Fortitudo Bologna",
-      "ospiti" => "Openjobmetis Varese",
-      "puntiCasa" => 70,
-      "puntiOspiti" => 91
-    ],
-    "Terza Partita" => [
-      "casa" => "Grissin Bon Reggio Emilia",
-      "ospiti" => "S.Bernardo-Cinelandia Cantù",
-      "puntiCasa" => 85,
-      "puntiOspiti" => 73
-    ],
-  ];
 
-  var_dump ($matches["Prima Partita"]["casa"]["-"]["ospiti"][" | "]["puntiCasa"]["-"]["puntiOspiti"]);
-?>;
+$partite = [
+  [
+    "casa" => "Segafredo Virtus Bologna",
+    "ospiti" => "OriOra Pistoia",
+    "puntiCasa" => 90,
+    "puntiOspiti" => 60
+  ],
+  [
+  "casa" => "S.Bernardo-Cinelandia Cantù",
+  "ospiti" => "Grissin Bon Reggio Emilia",
+  "puntiCasa" => 85,
+  "puntiOspiti" => 73
+  ],
+  [
+  "casa" => "Dolomiti Energia Trentino",
+  "ospiti" => "Germani Basket Brescia",
+  "puntiCasa" => 63,
+  "puntiOspiti" => 56
+  ],
+  [
+  "casa" => "Virtus Roma",
+  "ospiti" => "Pompea Fortitudo Bologna",
+  "puntiCasa" => 91,
+  "puntiOspiti" => 70
+  ]
+];
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Matches</title>
-  </head>
-  <body>
-    <h1></h1>
-  </body>
-</html>
+  for ($i=0; $i<count($partite); $i++ ) {
+    echo $partite[$i]["casa"]." - ".$partite[$i]["ospiti"]." | ".$partite[$i]["puntiCasa"]."-".$partite[$i]["puntiOspiti"]."<br>";
+  }
+?>
